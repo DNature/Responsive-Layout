@@ -1,0 +1,68 @@
+$primary-col: #b473b4b9;
+$secondary-col: #19181a;
+
+@mixin easeOut{
+    -webkit-transition: all 0.5s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -webkit-transition: all .8s ease-out;
+    transition: all .8s ease-out;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+
+    body{
+        background: lighten($primary-col, 35);
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        line-height: 1.5;
+    }
+
+    //Header and Nav
+    .main-header{
+        background: lighten($primary-col, 20);
+        height: 40px;
+        border-bottom: 2px solid lighten($secondary-col, 60);
+
+
+        li{
+            list-style: none;
+            margin-top: .5em;
+        }
+        .nav-container{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -ms-flex-line-pack: center;
+                align-content: center;
+                
+                a{
+                    padding: 1.5em 1.5em .7em 1.5em;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    color: $secondary-col;
+                    
+                    
+                    &:hover{
+                        @include easeOut();
+                        background: $primary-col;
+                    }
+                }
+        }
+    }
+
+    // Main Banner
+}
+

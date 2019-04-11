@@ -1,0 +1,32 @@
+{
+	"name": "responsive-layout",
+	"version": "1.0.0",
+	"description": "Responsive Layout",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"sass": "node-sass -w scss/ -o dist/css/ --recursive"
+	},
+	"author": "Divine Nature",
+	"license": "MIT",
+	"devDependencies": {
+		"autoprefixer": "^9.5.1",
+		"gulp": "^4.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-imagemin": "^5.0.3",
+		"gulp-rename": "^1.4.0",
+		"gulp-uglify": "^3.0.2",
+		"pixrem": "^5.0.0",
+		"postcss": "^7.0.14",
+		"postcss-color-rgba-fallback": "^3.0.0",
+		"postcss-opacity": "^5.0.0",
+		"postcss-pseudoelements": "^5.0.0",
+		"postcss-vmin": "^3.0.0",
+		"postcss-will-change": "^3.0.0",
+		"sass": "^1.18.0"
+	},
+	"dependencies": {
+		"node-sass": "^4.11.0",
+		"uglify-js": "^3.5.4"
+	}
+}
