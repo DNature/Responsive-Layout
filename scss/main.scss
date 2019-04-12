@@ -1,11 +1,62 @@
 $primary-col: #b473b4b9;
 $secondary-col: #19181a;
+$light-col: #e9e6e6ea;
+
 
 @mixin easeOut{
     -webkit-transition: all 0.5s ease-out;
     -webkit-transition: all 1s ease-out;
     -webkit-transition: all .8s ease-out;
     transition: all .8s ease-out;
+}
+@mixin btn-primary{
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    background: darken($primary-col, 10);
+    color: #f4f4f4;
+     border-radius: .3rem;
+     border: none;
+
+     &:hover{
+         background:#ac2bacb9;
+         @include easeOut();
+     }
+}
+@mixin btn-secondary{
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    background: $secondary-col;
+    color: #f4f4f4;
+     border-radius: .3rem;
+     border: none;
+
+       &:hover{
+         background: $primary-col;
+         @include easeOut();
+     }
+}
+@mixin btn-light{
+    padding: .9rem 2rem;
+    margin: 0.5rem;
+    background: $light-col;
+    color: $secondary-col;
+    border-radius: .3rem;
+    border: 2px solid lighten($secondary-col, 40);
+
+      &:hover{
+         background: rgb(209, 209, 209);
+         @include easeOut();
+     }
+}
+
+.btn-primary{
+    @include btn-primary();
+}
+.btn-secondary{
+    @include btn-secondary();
+}
+.btn-light{
+    @include btn-light();
 }
 
 
@@ -69,9 +120,68 @@ $secondary-col: #19181a;
     }
 
     // Main Banner
-    img.banner{
+    .slide {
+        margin: 0;
+        padding:0;
         width: 100%;
         height: 100vh;
+        overflow: hidden;
+    }
+
+    .goods{
+        margin: 1rem;
+        display: -ms-grid;
+        display: grid;
+                grid-template-areas: 'goods1 goods2 goods3 goods4';
+        -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr 2rem 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        -ms-grid-column-align: center;
+            justify-self: center;
+            justify-content: center;
+            justify-items: center;
+        // margin-top: 1rem;
+
+    }
+    .grid{
+        height: 450px;
+        width: 300px;
+        border-radius: 40px;
+        background: #ffffff;
+        overflow: hidden;
+        text-align: center;
+        border-bottom: 2px solid $secondary-col;
+        border-top: 2px solid $secondary-col;
+
+        &:hover{
+            -webkit-box-shadow: 2px -2px 20px #000;
+                box-shadow: 2px -2px 20px #000;
+            @include easeOut();
+        }
+
+            .image{
+                width: 500px;
+                height: 310px;
+                margin: 0 auto;
+            }
+    }
+    .goods1{
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        grid-area: goods1;
+    }
+    .goods2{
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+        grid-area: goods2;
+    }
+    .goods3{
+        -ms-grid-row: 1;
+        -ms-grid-column: 5;
+        grid-area: goods3;
+    }
+    .goods4{
+        -ms-grid-row: 1;
+        -ms-grid-column: 7;
+        grid-area: goods4;
     }
 }
-
