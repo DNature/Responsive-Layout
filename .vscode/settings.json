@@ -1,5 +1,7 @@
 {
     "standard.enable": false,
     "better-comments.highlightPlainText": true,
-    "editor.defaultFormatter": "vscode.configuration-editing"
+    // "editor.defaultFormatter": "vscode.configuration-editing",
+    "editor.defaultFormatter": "prettier"
+
 }

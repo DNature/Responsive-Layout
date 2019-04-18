@@ -1,0 +1,136 @@
+$primary-color: #012435;
+$secondary-color: #F77F00;
+$light-color: #D7EBEA;
+
+@mixin easeOut{
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+}
+@mixin ease{
+    -webkit-transition: 0.7;
+    transition: 0.7;
+
+}
+
+// BUTTONS
+.btn{
+    border: 1.5px solid $primary-color;
+    padding: 10px 20px;
+    margin: 10px auto;
+    width: 280px;
+    font-size: 1rem;
+    cursor: pointer;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: $primary-color;
+        z-index: -1;
+        -webkit-transition: 0.8s;
+        transition: 0.8s;
+    }
+
+    
+    &.btn1{
+    color: $primary-color;
+    background: none;
+
+    &:hover{
+        color: $light-color;
+
+        &::before{
+            height: 180px;
+        }
+    }
+    &::before{
+        top: 0;
+        border-radius: 0 0 50% 50%;
+    }
+    }
+    &.btn2{
+    color: $light-color;
+    background: $primary-color;
+
+     &:hover{
+        color: $primary-color;
+        background: none;
+
+        &::before{
+            height: 0;
+        }
+    }
+
+     &::before{
+        bottom: 0;
+        border-radius: 50% 50% 0 0;
+        height: 180px;
+    }
+    }
+}
+    .submit-btn{
+        width: 60%;
+        text-align: center;
+        padding: 1rem;
+        border: 1px solid $light-color;
+        color: $light-color;
+        background: $primary-color;
+        margin: 0 auto;
+        margin-top: 1rem;
+        @include easeOut;
+
+        &:hover{
+            background: $light-color;
+            color: $primary-color;
+        }
+    }
+
+// Media Querries and Mixins
+
+// Small Screens
+@mixin mediaSm {
+    @media screen and (max-width: 500px){
+        @content;
+    }
+}
+
+// Medium screens
+@mixin mediaMd{
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+
+// Large Screens
+@mixin mediaLg{
+    @media screen and (min-width: 769px) and (max-width: 1170px){
+        @content;
+    }
+}
+
+// Extra large Screens
+@mixin mediaXl{
+    @media screen and (min-width: 1171px){
+        @content;
+    }
+}
+// LandScape
+@mixin mediaLs{
+    @media screen and (max-height: 590px) and (max-width: 750px){
+        @content;
+    }
+}
+// other
+@mixin mediaOdd{
+    @media screen and (max-width: 600px){
+        @content;
+    }
+}

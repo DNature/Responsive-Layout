@@ -1,0 +1,231 @@
+@include mediaXl{
+    
+}
+@include mediaLg{
+    nav .menu{
+        width: 80%;
+    }
+    main{
+
+
+
+    .main-container{
+                         grid-template-areas: 'box1' 'box2' 'box3' 'box4';
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+
+        
+
+        .box1{
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            grid-area: box1;
+            width: 90%;
+            padding: 1rem;
+
+            h2{
+            font-size: 1.5rem;}
+        }
+        .box2{
+            -ms-grid-row: 2;
+            -ms-grid-column: 1;
+            grid-area: box2;
+            width: 100%;
+        }
+
+        .box3{
+            -ms-grid-row: 4;
+            -ms-grid-column: 1;
+            grid-area: box4;
+            width: 100%;
+            
+        }
+        .box4{
+            -ms-grid-row: 3;
+            -ms-grid-column: 1;
+            grid-area: box3;
+            width: 100%;
+            width: 90%;
+            padding: 1rem;
+
+            h2{
+            font-size: 1.5rem;}
+        }
+    }
+}
+    
+    
+}
+@include mediaMd{
+    nav .menu{
+        width: 90%;
+    }
+    main{
+    .main-container{
+                                     grid-template-areas: 'box1' 'box2' 'box3' 'box4';
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+
+        
+
+        .box1{
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            grid-area: box1;
+            width: 90%;
+            padding: 1rem;
+
+            h2{
+            font-size: 1.5rem;}
+        }
+        .box2{
+            -ms-grid-row: 2;
+            -ms-grid-column: 1;
+            grid-area: box2;
+            width: 100%;
+        }
+
+        .box3{
+            -ms-grid-row: 4;
+            -ms-grid-column: 1;
+            grid-area: box4;
+            width: 100%;
+            
+        }
+        .box4{
+            -ms-grid-row: 3;
+            -ms-grid-column: 1;
+            grid-area: box3;
+            width: 100%;
+            width: 90%;
+            padding: 1rem;
+
+            h2{
+            font-size: 1.5rem;}
+        }
+    }
+}
+    
+}
+@include mediaSm{
+    
+
+}
+@include mediaLs{
+    
+
+}
+
+@include mediaOdd{
+    .menu-btn{
+        z-index: 10000;
+        visibility: visible;
+        display: block;
+        position: fixed;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .hide-search{
+        visibility: hidden;
+        opacity: 0;
+    }
+    nav{
+        opacity: 0;
+        visibility: hidden;
+        background: none;
+        
+        &.show{
+            width: 100%;
+            opacity: 1;
+            visibility: visible;
+
+          
+            .menu{
+                background: $primary-color;
+                width: 100%;
+                opacity: 0.92;
+                
+            }
+             ul{
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                text-align: center;
+
+                a:hover{
+                background: lighten($primary-color, 5);
+                }
+            }
+        }
+    }
+
+    section{
+        .main-text{
+            font-size: 1.7rem;
+            line-height: 1;
+            margin-bottom: -3rem;
+
+        }
+     .wrapper{
+        display: block;
+    }
+}
+    main{
+
+
+
+    .main-container{
+                                     grid-template-areas: 'box1' 'box2' 'box3' 'box4';
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+
+        
+
+        .box1{
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            grid-area: box1;
+            width: 90%;
+            padding: 1rem;
+
+            h2{
+            font-size: 1.5rem;}
+        }
+        .box2{
+            -ms-grid-row: 2;
+            -ms-grid-column: 1;
+            grid-area: box2;
+            width: 100%;
+        }
+
+        .box3{
+            -ms-grid-row: 4;
+            -ms-grid-column: 1;
+            grid-area: box4;
+            width: 100%;
+            
+        }
+        .box4{
+            -ms-grid-row: 3;
+            -ms-grid-column: 1;
+            grid-area: box3;
+            width: 100%;
+            width: 90%;
+            padding: 1rem;
+
+            h2{
+            font-size: 1.5rem;}
+        }
+    }
+}
+.background h1{
+    font-size: 2.5rem;
+    margin-top: -4rem;
+}
+.contact{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+}
