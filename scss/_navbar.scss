@@ -47,6 +47,10 @@ nav{
                         transition: 0.5s;
                         display: block;
 
+                        &.current{
+                            color: $secondary-color;
+                        }
+
                             &.hide-item{
                             -webkit-transform: scale(0);
                             transform: scale(0);
