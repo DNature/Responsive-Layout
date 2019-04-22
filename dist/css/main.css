@@ -423,7 +423,10 @@ aside {
   .container-shop .container {
     grid-area: cont;
     display: grid;
-    grid-template-areas: 'grid-1 grid-2 grid-3'  'grid-4 grid-5 grid-6' 'grid-7 grid-8 grid-9' 'grid-10 grid-11 grid-12';
+    grid-template-areas: 'grid-1 grid-2 grid-3' 
+ 'grid-4 grid-5 grid-6'
+ 'grid-7 grid-8 grid-9'
+ 'grid-10 grid-11 grid-12';
     grid-template-columns: repeat(3, 1fr);
     padding-right: 5%;
     padding-left: .8rem;
@@ -990,7 +993,12 @@ footer {
     .container-shop .container {
       grid-area: cont;
       display: grid;
-      grid-template-areas: 'grid-1 grid-2'  'grid-3 grid-4'  'grid-5 grid-6' 'grid-7 grid-8' 'grid-10 grid-9'  'grid-11 grid-12';
+      grid-template-areas: 'grid-1 grid-2' 
+ 'grid-3 grid-4' 
+ 'grid-5 grid-6'
+ 'grid-7 grid-8'
+ 'grid-10 grid-9' 
+ 'grid-11 grid-12';
       grid-template-columns: repeat(2, 1fr);
       padding-right: 5%;
       padding-left: .8rem;
@@ -1205,7 +1213,12 @@ footer {
             color: #F77F00; }
     .container-shop .container {
       display: grid;
-      grid-template-areas: 'grid-1 grid-2'  'grid-3 grid-4'  'grid-5 grid-6' 'grid-7 grid-8' 'grid-10 grid-9'  'grid-11 grid-12';
+      grid-template-areas: 'grid-1 grid-2' 
+ 'grid-3 grid-4' 
+ 'grid-5 grid-6'
+ 'grid-7 grid-8'
+ 'grid-10 grid-9' 
+ 'grid-11 grid-12';
       grid-template-columns: repeat(3, 1fr);
       padding: 5%;
       grid-gap: 0.8rem; }
